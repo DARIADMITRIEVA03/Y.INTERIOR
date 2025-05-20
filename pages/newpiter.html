@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Involve:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href="../styles/newpiter.css" rel="stylesheet"/>
+</head>
+<body>
+<button id="menuButton">МЕНЮ</button>
+<menu>
+    <div class="menu-container">
+        <img src="../images/medias/close.svg" class="menu-close">
+        <div class="menu-links">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="portfolio.html">ПОРТФОЛИО</a>
+            <a href="services.html">УСЛУГИ</a>
+            <a href="contacts.html">КОНТАКТЫ</a>
+        </div>
+        <div class="menu-social">
+            <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+        </div>
+    </div>
+</menu>
+<script>
+    const menu = document.querySelector('menu');
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.querySelector('.menu-close');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.add('show');
+        menuButton.classList.add('hide');
+    });
+
+    closeButton.addEventListener('click', () => {
+        menu.classList.remove('show');
+        menuButton.classList.remove('hide');
+    });
+</script>
+<header>
+    <img src="../images/newpiter/Logo2.png"/>
+    <div class="header-container">
+        <h1 id="nameHeader">ЖК NEWПИТЕР</h1>
+        <h2 id="subTitleHeader">Дизайн проект полного цикла</h2>
+    </div>
+</header>
+<main>
+    <div id="mainContainer">
+        <div class = "row">
+                <img src="../images/newpiter/leftdiv1.png" class="ratio-image"/>
+            <div class="text-block">
+                <p>Join us for the 40th Anniversary of the 
+                    Hall of Fame</p>
+            </div>
+        </div>
+        <div class = "row">
+            <img src="../images/newpiter/leftdiv2.png" class="ratio-image"/>
+            <img src="../images/newpiter/rightdiv2.png" class="ratio-image"/>
+        </div>
+        <div class = "row">
+            <div class="text-block left-text-block" >
+                <p>Join us for the 40th Anniversary of the 
+                    Hall of Fame</p>
+            </div>
+                <img src="../images/newpiter/rightdiv3.png" class="ratio-image"/>
+        </div>
+    </div>
+    <div class="project-navigation">
+        <button>
+            Предыдущий проект
+        </button>
+        <button>
+            Следующий проект
+        </button>
+    </div>
+</main>
+<footer>
+    <div class="footerContainer">
+        <div class="footerLeft">
+            <p>
+                г. Санкт-Петербург,<br>
+                Студия дизайна интерьеров “Y.INTERIOR”<br>
+                Работаем с 2018 года.<br>
+                Copyright © All rights reserved.
+            </p>
+        </div>
+        <div class="footerRight">
+            <p>
+                nataliya_designer@mail.ru<br>
+                nataliya_designer@mail.ru<br>
+                8 931-368-81-16<br>
+                <br>
+                Мы в социальных сетях:
+            </p>
+            <div class="socialMedia">
+                <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

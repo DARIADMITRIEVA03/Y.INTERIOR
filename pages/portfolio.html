@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Niramit:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href="../styles/portfolio.css" rel="stylesheet"/>
+</head>
+<body>
+<button id="menuButton">МЕНЮ</button>
+<menu>
+    <div class="menu-container">
+        <img src="../images/medias/close.svg" class="menu-close">
+        <div class="menu-links">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="portfolio.html">ПОРТФОЛИО</a>
+            <a href="services.html">УСЛУГИ</a>
+            <a href="contacts.html">КОНТАКТЫ</a>
+        </div>
+        <div class="menu-social">
+            <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+        </div>
+    </div>
+</menu>
+<script>
+    const menu = document.querySelector('menu');
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.querySelector('.menu-close');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.add('show');
+        menuButton.classList.add('hide');
+    });
+
+    closeButton.addEventListener('click', () => {
+        menu.classList.remove('show');
+        menuButton.classList.remove('hide');
+    });
+</script>
+<header>
+    <div class="header-container">
+        <h1>ПОРТФОЛИО</h1>
+        <img src="../images/services/servicesHeader.png"/>
+        <p>Join us for the 40th Anniversary of the Hall of Fame, the premier black-tie gala that brings together 1,000 industry A-listers for an unforgettable night! </p>
+    </div>
+</header>
+<main>
+    <div id="mainContainer">
+        <div id="leftContainer">
+            <div class="leftDiv1 project">
+                <img src="../images/portfolio/mainLeft1.png"/>
+                <div class="projectOverlay" id="projectOverlay1">
+                    <div class="projectText">
+                        <h2>Вставить текст</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="leftDiv2 project">
+                <img src="../images/portfolio/mainLeft2.png"/>
+                <div class="projectOverlay" id="projectOverlay2">
+                    <div class="projectText">
+                        <h2>Вставить текст</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="leftDiv3 project">
+                <img src="../images/portfolio/mainLeft3.png"/>
+                <div class="projectOverlay" id="projectOverlay3">
+                    <div class="projectText">
+                        <h2>Вставить текст</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="leftDiv4 project">
+                <img src="../images/portfolio/mainLeft4.png"/>
+                <div class="projectOverlay" id="projectOverlay4">
+                    <div class="projectText">
+                        <h2>КП Виль Парк</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rightContainer">
+            <div class="rightDiv1 project">
+                <img src="../images/portfolio/mainRight1.png"/>
+                <div class="projectOverlay" id="projectOverlay5">
+                    <div class="projectText">
+                        <h2>ЖК NEWПИТЕР</h2>
+                        <a href="newpiter.html"><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rightDiv2 project">
+                <img src="../images/portfolio/mainRight2.png"/>
+                <div class="projectOverlay">
+                    <div class="projectText">
+                        <h2>Вставить текст</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rightDiv3 project">
+                <img src="../images/portfolio/mainRight3.png"/>
+                <div class="projectOverlay" id="projectOverlay6">
+                    <div class="projectText">
+                        <h2>Вставить текст</h2>
+                        <a href=""><button>Смотреть больше</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footerContainer">
+        <div class="footerLeft">
+            <p>
+                г. Санкт-Петербург,<br>
+                Студия дизайна интерьеров “Y.INTERIOR”<br>
+                Работаем с 2018 года.<br>
+                Copyright © All rights reserved.
+            </p>
+        </div>
+        <div class="footerRight">
+            <p>
+                nataliya_designer@mail.ru<br>
+                nataliya_designer@mail.ru<br>
+                8 931-368-81-16<br>
+                <br>
+                Мы в социальных сетях:
+            </p>
+            <div class="socialMedia">
+                <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
