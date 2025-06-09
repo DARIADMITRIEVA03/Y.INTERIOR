@@ -1,0 +1,624 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    max-width: 2560px;
+    font-family: 'Inter', serif;
+    margin:0;
+    scroll-behavior: unset;
+    --sb-track-color: #292929;
+    --sb-thumb-color: #404040;
+    --sb-size: 8px;
+    background: rgba(58, 55, 51, 1);
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+}
+
+#menuButton {
+    top:108px;
+    right:186px;
+    position: absolute;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background: none;
+    border: none;
+    color: #FFF;
+    z-index: 100;
+    cursor: pointer;
+    transition: right 0.5s ease-in-out;
+}
+
+menu {
+    position: absolute;
+    top: 0;
+    right: -611px;
+    height: 1095px;
+    width: 611px;
+    background: rgba(5, 5, 5, 0.47);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 186px 0 0 100px;
+    box-sizing: border-box;
+    z-index: 3;
+    margin: 0;
+    transition: right 0.5s ease-in-out;
+}
+
+menu.show {
+    right: 0;
+}
+
+#menuButton.hide {
+    right: -200px;
+}
+
+.menu-close {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+}
+
+.menu-links {
+    position: relative;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.menu-links a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: rgba(221, 218, 213, 1);
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.menu-social {
+    margin-top: 115px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu-social a img {
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    width: 100%;
+    height: 1095px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #FFF;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+.header-container {
+    text-align: left;
+    position: relative;
+
+}
+
+.header-container img{
+    filter: brightness(60%);
+}
+
+.header-container div {
+    position: absolute;
+    margin-top: 741px;
+    margin-left: 871px;
+    z-index: 999;
+}
+
+#subTitleHeader {
+    text-align: right;
+    font-size: 61px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 78px;
+}
+
+.header-container p {
+    position: relative;
+    max-width: 1000px;
+    font-size: 40px;
+    text-align: center;
+    color: #FFF;
+    justify-content: center;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    top:90px;
+    z-index: 999;
+}
+
+
+#logo{
+    position: absolute;
+    top:90px;
+    left: 172px;
+    z-index: 999;
+}
+
+#logo img {
+    max-width: 334px;
+    max-height: 103px;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-columns: 58.4% auto;
+}
+
+
+#leftContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#leftContainer div {
+    margin: 0;
+    padding: 0;
+}
+
+.leftDiv1 {
+    grid-column: span 2 / span 2;
+}
+
+.leftDiv2 {
+    grid-row-start: 2;
+}
+
+.leftDiv3 {
+    grid-row-start: 2;
+}
+
+.leftDiv4 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+}
+
+#rightContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap:0;
+}
+
+#rightContainer div {
+    margin: 0;
+    padding: 0;
+}
+
+#mainContainer img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+}
+
+.div1 .projectOverlay, .div2 .projectOverlay {
+    padding-top: 40%;
+    padding-left: 20%;
+}
+
+.div3 .projectOverlay, .div4 .projectOverlay {
+    padding-top: 10%;
+    padding-left: 20%;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 42, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white; /* Цвет текста */
+
+}
+
+.projectOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 42, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.projectOverlay h2 {
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.09px;
+}
+
+.projectOverlay button {
+    position: relative;
+    background-color: rgba(0,0,0,0.0);
+    border: 3px white solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter;
+    font-size: 36px;
+    line-height: 43.57px;
+    max-width: 376px;
+    max-height: 75px;
+    padding: 16px 28px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 30px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projectOverlay button:hover {
+    transform: scale(1.1)
+}
+
+.project:hover .projectOverlay {
+    opacity: 1;
+}
+
+.projectText {
+    position: relative;
+    top: 50%;
+    left: 15%;
+}
+
+#projectOverlay5 .projectText {
+    top:70%;
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%
+}
+
+.footerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 82px 200px;
+    font-size: 28px;
+    line-height: 34.13px;
+    color: rgba(160, 160, 160, 1);
+
+}
+
+.footerLeft {
+    text-align: left;
+}
+
+.footerRight {
+    text-align: right;
+}
+
+.footerContainer, .footerRight, .footerLeft {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 23.04px;
+    justify-content: right;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    #menuButton {
+        font-size: 40px;
+        right: 50px;
+        top: 50px;
+    }
+
+    menu {
+        width: 100%;
+        height: 100%;
+        padding: 100px 20px 0;
+    }
+
+    .menu-links a {
+        font-size: 32px;
+    }
+
+    .menu-social a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    .header-container {
+        top: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .header-container h2 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    #mainContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .projectOverlay h2 {
+        font-size: 32px;
+    }
+
+    .projectOverlay button {
+        font-size: 28px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menuButton {
+        font-size: 30px;
+        right: 20px;
+    }
+
+    menu {
+        padding: 50px 10px 0;
+    }
+
+    .menu-links a {
+        font-size: 28px;
+    }
+
+    header {
+        height: 500px;
+    }
+
+    .header-container {
+        top: 300px;
+        width: 95%;
+    }
+
+    .header-container h2 {
+        font-size: 24px;
+    }
+
+    #mainContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .projectOverlay h2 {
+        font-size: 24px;
+    }
+
+    .projectOverlay button {
+        font-size: 20px;
+    }
+
+    .footerContainer {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 20px;
+    }
+
+    .socialMedia {
+        gap: 15px;
+    }
+
+    .socialMedia a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1800px) {
+
+    #menuButton {
+        font-size: 48px;
+        top: 80px;
+        right: 100px;
+    }
+
+    menu {
+        width: 480px;
+        max-height: 1000px;
+    }
+
+    .menu-links a {
+        font-size: 36px;
+    }
+
+    header {
+        height: 1000px;
+    }
+
+    h1 {
+        font-size: 96px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+    
+    .projectOverlay h2 {
+        font-size: 36px;
+    }
+
+    .projectOverlay button {
+        font-size: 28px;
+    }
+
+    .footerContainer {
+        padding: 60px 100px;
+        font-size: 24px;
+    }
+}
+
+
+
+@media (max-width: 980px) {
+
+    menu {
+        width: 50%;
+        right: -1000px;
+        padding: 100px 0 0 50px;
+        height: 800px;
+    }
+    #menuButton {
+        font-size: 40px;
+        top: 60px;
+        right: 200px;
+    }
+
+
+    .header-container h2 {
+        font-size: 40px;
+    }
+
+    .footerContainer {
+        padding: 40px 20px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    menu {
+        width: 50%;
+        right: -1000px;
+        padding: 150px 0 0 50px;
+    }
+    .header-container {
+        top: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    .header-container h2 {
+        font-size: 32px;
+    }
+
+    .projectOverlay h2 {
+        font-size: 28px;
+    }
+
+    .projectOverlay button {
+        font-size: 24px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #menuButton {
+        font-size: 30px;
+        top: 40px;
+        right: 20px;
+    }
+
+    .header-container {
+        top: 300px;
+        width: 95%;
+    }
+
+    .header-container h2 {
+        font-size: 24px;
+    }
+
+    .projectOverlay h2 {
+        font-size: 24px;
+    }
+
+    .projectOverlay button {
+        font-size: 20px;
+    }
+
+    .footerContainer {
+        font-size: 18px;
+    }
+}

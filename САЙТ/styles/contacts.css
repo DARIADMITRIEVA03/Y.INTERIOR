@@ -1,0 +1,419 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 2560px;
+    font-family: 'Inter', serif;
+    margin:0;
+    scroll-behavior: unset;
+    --sb-track-color: #292929;
+    --sb-thumb-color: #404040;
+    --sb-size: 8px;
+    background: rgba(58, 55, 51, 1);
+    overflow-x: hidden;
+    position: relative;
+}
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+}
+
+#menuButton {
+    top:108px;
+    right:186px;
+    position: absolute;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background: none;
+    border: none;
+    color: #FFF;
+    z-index: 100;
+    cursor: pointer;
+    transition: right 0.5s ease-in-out;
+}
+
+menu {
+    position: absolute;
+    top: 0;
+    right: -611px;
+    height: 1080px;
+    width: 611px;
+    background: rgba(5, 5, 5, 0.47);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 186px 0 0 100px;
+    box-sizing: border-box;
+    z-index: 3;
+    margin: 0;
+    transition: right 0.5s ease-in-out;
+}
+
+menu.show {
+    right: 0;
+}
+
+#menuButton.hide {
+    right: -200px;
+}
+
+.menu-close {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+}
+
+.menu-links {
+    position: relative;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.menu-links a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: rgba(221, 218, 213, 1);
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.menu-social {
+    margin-top: 115px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu-social a img {
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    top:90px;
+    left: 172px;
+    z-index: 999;
+
+}
+
+#logo img {
+    max-width: 334px;
+    max-height: 103px;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #FFF;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+main p {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header-container {
+    text-align: right;
+    position: relative;
+}
+
+.header-label {
+    position: absolute;
+    text-align: left;
+    margin-top: 741px;
+    margin-left: 193px;
+}
+
+main {
+    padding: 0 50px; /* Универсальный отступ для небольших экранов */
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    grid-template-rows: repeat(2, auto); /* Автоматическая высота строк */
+    gap: 40px; /* Расстояние между элементами */
+    padding: 100px 0;
+    justify-items: center; /* Центрирование контента внутри ячеек */
+    align-items: center;
+    max-width: 1200px; /* Централизуем сетку */
+    width: 100%;
+}
+
+.main-container div {
+    border: 3px solid #A0A0A0;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 550px; /* Ограничение ширины каждого блока */
+}
+
+.div1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.div2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.div3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.div4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+
+.map-section {
+    position: relative;
+    top: 83px;
+    text-align: center;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center; /* Центрирование контейнера */
+    align-items: center;
+    flex-direction: column;
+}
+
+.map {
+    position: relative;
+    width: 1511px;
+    height: 839px;
+    margin: 39px auto; /* Автоматическое выравнивание по горизонтали */
+}
+
+.map iframe {
+    width: 100%; /* Карта занимает всю ширину контейнера */
+    height: 100%; /* Карта занимает всю высоту контейнера */
+    border: none;
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin-top: 240px;
+}
+
+.footerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 82px 200px;
+    font-size: 28px;
+    line-height: 34.13px;
+    color: rgba(160, 160, 160, 1);
+
+}
+
+.footerLeft {
+    text-align: left;
+}
+
+.footerRight {
+    text-align: right;
+}
+
+.footerContainer, .footerRight, .footerLeft {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 23.04px;
+    justify-content: right;
+}
+
+@media (max-width: 768px) {
+    #menuButton {
+        font-size: 40px;
+        right: 20px;
+    }
+
+    .menu-links a {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 20px;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 1200px) {
+    #menuButton {
+        font-size: 48px;
+        right: 50px;
+    }
+
+    .menu-links a {
+        font-size: 36px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+
+
+    .main-container {
+        column-gap: 70px;
+        row-gap: 30px;
+    }
+
+    .main-container p {
+        font-size: 20px;
+    }
+
+    .footerContainer {
+        padding: 40px 20px;
+        font-size: 24px;
+    }
+
+    .map {
+        width: 80%;
+        height: 500px;
+    }
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    #menuButton {
+        font-size: 40px;
+        right: 20px;
+    }
+
+    .menu-links a {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 20px;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    #menuButton {
+        font-size: 32px;
+        right: 10px;
+    }
+
+    .menu-links a {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .footerContainer {
+        font-size: 16px;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+

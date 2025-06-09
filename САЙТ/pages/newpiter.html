@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ЖК NEWПИТЕР</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Niramit:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Involve:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href="../styles/newpiter.css" rel="stylesheet"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../styles/adapt.css">
+
+</head>
+<body>
+<button id="menuButton">
+    <i></i>
+    <i></i>
+    <i></i>
+</button>
+<menu>
+    <div class="menu-container">
+        <img src="../images/medias/close.svg" class="menu-close">
+        <div class="menu-links">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="portfolio.html">ПОРТФОЛИО</a>
+            <a href="services.html">УСЛУГИ</a>
+            <a href="contacts.html">КОНТАКТЫ</a>
+        </div>
+        <div class="menu-social">
+            <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+            <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+        </div>
+    </div>
+</menu>
+<script>
+    const menu = document.querySelector('menu');
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.querySelector('.menu-close');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.add('show');
+        menuButton.classList.add('hide');
+    });
+
+    closeButton.addEventListener('click', () => {
+        menu.classList.remove('show');
+        menuButton.classList.remove('hide');
+    });
+</script>
+<style>
+    header {
+        height: 60vh;
+    }
+    .row {
+        height: 440px;
+        display: flex;
+        width: 100%;
+        max-width: 1450px;
+        justify-content: space-between;
+    }
+    #mainContainer {
+        background-color: #DDDAD5;
+        max-width: 1450px;
+        margin: auto;
+        border: 1px solid #c6c4c2;
+    }
+    .project-navigation {
+        max-width: 1450px;
+        margin: auto;
+        padding: 0;
+    }
+    /*main {*/
+    /*    background-color: #DDDAD5;*/
+    /*}*/
+    p {
+        font-weight: 400;
+    }
+    .gdfherty, .gdfghdh {
+        height: 100%;
+        width: 100%;
+        flex: 1;
+    }
+    @media (min-width: 747px) and (max-width: 1099px) {
+
+        .header-container {
+            top: unset;
+            left: 30px;
+        }
+        .row {
+            height: auto;
+        }
+        .project-navigation {
+            padding: 0 30px;
+        }
+
+    }
+
+    @media (max-width: 746px) {
+        .project-navigation button {
+            padding: 16px 10px;
+        }
+        .row {
+            height: auto;
+        }
+        header #logo {
+            top: 70px;
+        }
+        #menuButton {
+            right: 50px;
+            top: 80px;
+        }
+        .text-block {
+            font-size: 15px;
+            padding: 30px;
+        }
+        .project-navigation {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+        .project-navigation button {
+            font-family: Inter;
+            border: 2px #A0A0A0 solid;
+            font-size: 12px;
+
+        }
+    }
+
+
+    </style>
+<header>
+    <div id="logo"></div>
+    <div class="header-container">
+        <h1 id="nameHeader">ЖК NEWПИТЕР</h1>
+        <h2 id="subTitleHeader">Дизайн проект полного цикла</h2>
+    </div>
+</header>
+<main>
+    <div id="mainContainer">
+        <div class = "row">
+                <img src="../images/newpiter/leftdiv1.png" class="ratio-image"/>
+            <div class="text-block">
+                <p>Join us for the 40th Anniversary of the 
+                    Hall of Fame</p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="gdfherty" style="background: url('../images/newpiter/leftdiv2.png') center center/cover no-repeat"></div>
+            <div class="gdfghdh" style="background: url('../images/newpiter/rightdiv2.png') center center/cover no-repeat"></div>
+
+        </div>
+        <div class = "row">
+            <div class="text-block left-text-block" >
+                <p>Join us for the 40th Anniversary of the 
+                    Hall of Fame</p>
+            </div>
+                <img src="../images/newpiter/rightdiv3.png" class="ratio-image"/>
+        </div>
+    </div>
+    <div class="project-navigation">
+        <button>
+            Предыдущий проект
+        </button>
+        <button>
+            Следующий проект
+        </button>
+    </div>
+</main>
+
+<footer>
+    <div class="footerContainer">
+        <div class="footerLeft">
+            <p>
+                г. Санкт-Петербург,<br>
+                Студия дизайна интерьеров “НЬЮ ДИЗАЙН”<br>
+                Работаем с 2015 года.<br>
+                Copyright © All rights reserved.
+            </p>
+            <img src="../images/logo/Logo2.png" width="160px">
+        </div>
+        <div class="footerRight">
+            <p>
+                nataliya_designer@mail.ru<br>
+                nataliya_designer@mail.ru<br>
+                8 931-368-81-16<br>
+                <br>
+                Мы в социальных сетях:
+            </p>
+            <div class="socialMedia">
+                <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

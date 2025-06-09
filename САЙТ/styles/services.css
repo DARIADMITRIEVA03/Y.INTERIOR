@@ -1,0 +1,433 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 2560px;
+    font-family: 'Inter', serif;
+    margin:0;
+    scroll-behavior: unset;
+    --sb-track-color: #292929;
+    --sb-thumb-color: #404040;
+    --sb-size: 8px;
+    background: rgba(58, 55, 51, 1);
+    position: relative;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+}
+
+#menuButton {
+    top:108px;
+    right:186px;
+    position: absolute;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background: none;
+    border: none;
+    color: #FFF;
+    z-index: 100;
+    cursor: pointer;
+    transition: right 0.5s ease-in-out;
+}
+
+menu {
+    position: absolute;
+    top: 0;
+    right: -611px;
+    height: 1080px;
+    width: 611px;
+    background: rgba(5, 5, 5, 0.47);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 186px 0 0 100px;
+    box-sizing: border-box;
+    z-index: 3;
+    margin: 0;
+    transition: right 0.5s ease-in-out;
+}
+
+menu.show {
+    right: 0;
+}
+
+#menuButton.hide {
+    right: -200px;
+}
+
+.menu-close {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+}
+
+.menu-links {
+    position: relative;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.menu-links a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: rgba(221, 218, 213, 1);
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.menu-social {
+    margin-top: 115px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu-social a img {
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    width: 100%;
+    height: 1540px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #FFF;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+
+#logo{
+    position: absolute;
+    top:90px;
+    left: 172px;
+    z-index: 999;
+}
+
+#logo img {
+    max-width: 334px;
+    max-height: 103px;
+}
+
+main {
+    width: 100vw;
+    max-width: 2560px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.main-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+
+.main-container div {
+    overflow: hidden;
+}
+
+
+.main-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.div1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+}
+
+.div2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+}
+
+.div3, .div4 {
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+
+.serviceOverlay {
+    padding-top: 40%;
+    padding-left: 20%;
+}
+
+.div3 .serviceOverlay, .div4 .serviceOverlay {
+    padding-top: 10%;
+    padding-left: 20%;
+}
+
+.service {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 42, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+
+}
+
+.serviceOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 42, 0.6);
+    color: white;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.serviceOverlay h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.09px;
+}
+
+.serviceOverlay button {
+    position: relative;
+    background-color: rgba(0,0,0,0.0);
+    border: 3px white solid;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter;
+    font-size: 36px;
+    max-width: 376px;
+    max-height: 80px;
+    padding: 16px 28px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 30px 0 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.serviceOverlay button:hover {
+    transform: scale(1.1)
+}
+
+.service:hover .serviceOverlay {
+    opacity: 1;
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 81px;
+    height: 100%
+}
+
+.footerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 82px 200px;
+    font-size: 28px;
+    font-weight: lighter;
+    line-height: 34.13px;
+    color: rgba(160, 160, 160, 1);
+
+}
+
+.footerLeft {
+    text-align: left;
+    font-weight: 100;
+}
+
+.footerRight {
+    text-align: right;
+}
+
+.footerContainer, .footerRight, .footerLeft {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 23.04px;
+    justify-content: right;
+}
+
+@media (max-width: 768px) {
+
+    #menuButton {
+        font-size: 40px;
+        right: 20px;
+    }
+
+    menu {
+        width: 100%;
+        right: -100%;
+        padding: 100px 0 0 20px;
+    }
+
+    menu.show {
+        right: 0;
+    }
+
+    .menu-links {
+        margin-top: 80px;
+    }
+
+    .menu-links a {
+        font-size: 36px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .header-container h1 {
+        font-size: 60px;
+        margin-left: 20px;
+    }
+
+    .header-container p {
+        font-size: 30px;
+        top: 30px;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .div1, .div2 {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceOverlay h2 {
+        font-size: 32px;
+    }
+
+    .serviceOverlay button {
+        font-size: 28px;
+        max-width: 320px;
+    }
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 1728px) {
+
+    #menuButton {
+        font-size: 50px;
+        right: 30px;
+    }
+
+    menu {
+        width: 50%;
+        right: -1000px;
+        padding: 150px 0 0 50px;
+    }
+
+    menu.show {
+        right: 0;
+    }
+
+    .menu-links {
+        margin-top: 100px;
+    }
+
+    .menu-links a {
+        font-size: 42px;
+    }
+
+
+    .div1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        height: auto;
+    }
+
+    .div2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        height: auto;
+    }
+    .serviceOverlay h2 {
+        font-size: 40px;
+    }
+
+    .serviceOverlay button {
+        font-size: 32px;
+        max-width: 350px;
+    }
+
+}
+
+
