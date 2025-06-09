@@ -1,1 +1,275 @@
-# Y.INTERIOR
+<!DOCTYPE html>
+<html lang="RU-ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../styles/adapt.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+   
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Involve:wght@100;300;400&display=swap' rel='stylesheet'>
+</head>
+<body>
+<div id="app">
+    <button id="menuButton">
+        <i></i>
+        <i></i>
+        <i></i>
+    </button>
+    <menu>
+        <div class="menu-container">
+            <img src="../images/medias/close.svg" class="menu-close">
+            <div class="menu-links">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="portfolio.html">ПОРТФОЛИО</a>
+                <a href="services.html">УСЛУГИ</a>
+                <a href="contacts.html">КОНТАКТЫ</a>
+            </div>
+            <div class="menu-social">
+                <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+                <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+            </div>
+        </div>
+    </menu>
+
+    <header class="header">
+        <div id="logo"></div>
+        <div>
+            <h1 id="nameHeader">Y.INTERIOR</h1>
+            <h2 id="subTitleHeader">Дизайн студия</h2>
+            <button id="aboutBtn" class="mobonly">Связаться с нами</button>
+        </div>
+    </header>
+    <section class="about">
+        <div>
+            <img src="../images/portfolio/about.png"/>
+        </div>
+        <div class="aboutRight">
+            <div>
+                <h1 id="aboutTitle">О НАС</h1>
+                <p id="aboutText">
+                    Меня зовут Наталия Юсупова, я - ведущий дизайнер и руководитель студии Нью-Дизайн.<br><br>
+                    С моей командой мы поможем вам реализовать самые смелые фантазии и превратить ваш дом в мечту!
+                </p>
+                <button id="aboutBtn">Связаться с нами</button>
+            </div>
+        </div>
+    </section>
+    <section class="awards">
+        <div class="awardsContainer">
+            <h1>НАГРАДЫ</h1>
+            <div class="awardCarousel">
+                <div class="award"><img src="../images/main/award1.png"/></div>
+                <div class="award"><img src="../images/main/award2.png"/></div>
+                <div class="award"><img src="../images/main/award3.png"/></div>
+                <div class="award"><img src="../images/main/award1.png"/></div>
+                <div class="award"><img src="../images/main/award2.png"/></div>
+                <div class="award"><img src="../images/main/award3.png"/></div>
+                <div class="award"><img src="../images/main/award1.png"/></div>
+                <div class="award"><img src="../images/main/award2.png"/></div>
+                <div class="award"><img src="../images/main/award3.png"/></div>
+                <div class="award"><img src="../images/main/award1.png"/></div>
+                <div class="award"><img src="../images/main/award2.png"/></div>
+                <div class="award"><img src="../images/main/award3.png"/></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="th-get-consult">
+        <span>Join us for the 40th Anniversary of the Hall of Fame, the
+            <br>premier black-tie gala that brings together 1,000 industry
+            <br>A-listers for an unforgettable night!</span>
+        <div class="th-get-pict"></div>
+        <div class="th-form-cons">
+            <div>
+                <span>Получить консультацию</span>
+                <span>Оставьте заявку и мы перезвоним вам в течении суток</span>
+            </div>
+            <form id="myForm" method="post">
+                <input id="fname" name="fname" type="text" placeholder="ФИО" required>
+                <input id="fphone" name="fphone" type="tel" placeholder="Номер телефона" required>
+                <button type="submit">Заказать звонок</button>
+                <div id="response" style="margin-top: 15px;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: -15px;"></div>
+
+
+            </form>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#myForm').on('submit', function(event) {
+                        event.preventDefault(); 
+
+                        $.ajax({
+                            url: '../sendtg.php',
+                            type: 'post',
+                            data: $(this).serialize(), // сбор данных формы
+                            success: function(response) {
+                                $('#response').html('Заявка успешно отправлена!'); // выводим ответ сервера
+                                $('#myForm')[0].reset(); // очищаем форму
+                            },
+                            error: function() {
+                                $('#response').html('Произошла ошибка при отправке данных.');
+                            }
+                        });
+                    });
+                });
+            </script>
+
+
+        </div>
+    </section>
+
+
+    <section class="team pconly">
+        <div class="teamContainer">
+            <h1>НАША КОМАНДА</h1>
+
+            <div class="teamGroup">
+                <div class="teamCarousel">
+                    <div class="person">
+                        <img src="../images/main/person1.png"/>
+                        <div class="personOverlay">
+                            <h2>Дарья Дмитриева</h2>
+                            <p>Дизайнер</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person2.png"/>
+                        <div class="personOverlay">
+                            <h2>Наталия Юсупова</h2>
+                            <p>Наталия</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person3.png"/>
+                        <div class="personOverlay">
+                            <h2>Семён Юсупов</h2>
+                            <p>Куратор проекта</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person1.png"/>
+                        <div class="personOverlay">
+                            <h2>Дарья Дмитриева</h2>
+                            <p>Дизайнер</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person2.png"/>
+                        <div class="personOverlay">
+                            <h2>Наталия Юсупова</h2>
+                            <p>Наталия</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person3.png"/>
+                        <div class="personOverlay">
+                            <h2>Семён Юсупов</h2>
+                            <p>Куратор проекта</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person1.png"/>
+                        <div class="personOverlay">
+                            <h2>Дарья Дмитриева</h2>
+                            <p>Дизайнер</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person2.png"/>
+                        <div class="personOverlay">
+                            <h2>Наталия Юсупова</h2>
+                            <p>Наталия</p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <img src="../images/main/person3.png"/>
+                        <div class="personOverlay">
+                            <h2>Семён Юсупов</h2>
+                            <p>Куратор проекта</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-prev">&#10094;</button>
+                <button class="carousel-next">&#10095;</button>
+            </div>
+
+            <p>Join us for the 40th Anniversary of the Hall of Fame</p>
+
+        </div>
+    </section>
+
+    <section class="th-team mobonly">
+        <span class="h1">НАША КОМАНДА</span>
+        <div class="th-person-card">
+            <div class="pict" style="background-image: url('../images/main/person2.png')"></div>
+            <span class="head">Наталия Юсупова</span>
+            <span class="podpis">Руководитель студии</span>
+        </div>
+        <div class="th-person-card">
+            <div class="pict" style="background-image: url('../images/main/person3.png')"></div>
+            <span class="head">Семен Юсупов</span>
+            <span class="podpis">Куратор проектов</span>
+        </div>
+        <div class="th-person-card">
+            <div class="pict" style="background-image: url('../images/main/person1.png')"></div>
+            <span class="head">Карина Бишкевич</span>
+            <span class="podpis">Специалист авторского надзора</span>
+        </div>
+        <div class="th-person-card">
+            <div class="pict" style="background-image: url('../images/main/person4.png')"></div>
+            <span class="head">Дмитриева Дарья</span>
+            <span class="podpis">Дизайнер интерьеров</span>
+        </div>
+
+        <div class="citata">
+            Join us for the 40th Anniversary of the Hall of Fame, the premier black-tie gala that brings together 1,000 industry
+        </div>
+    </section>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerLeft">
+                <p>
+                    г. Санкт-Петербург,<br>
+                    Студия дизайна интерьеров “НЬЮ ДИЗАЙН”<br>
+                    Работаем с 2015 года.<br>
+                    Copyright © All rights reserved.
+                </p>
+                <img src="../images/logo/Logo2.png" width="160px">
+            </div>
+            <div class="footerRight">
+                <p>
+                    nataliya_designer@mail.ru<br>
+                    nataliya_designer@mail.ru<br>
+                    8 931-368-81-16<br>
+                    <br>
+                    Мы в социальных сетях:
+                </p>
+                <div class="socialMedia">
+                    <a href="" target="_blank"><img src="../images/medias/vk.svg"/></a>
+                    <a href="" target="_blank"><img src="../images/medias/instagram.svg"/></a>
+                    <a href="" target="_blank"><img src="../images/medias/telegram.svg"/></a>
+                    <a href="" target="_blank"><img src="../images/medias/twitter.svg"/></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="../script.js">
+</script>
+</body>
+</html>
